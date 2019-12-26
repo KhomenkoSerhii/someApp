@@ -13,9 +13,9 @@
 }
   
 .AnswerItem.success{
-    background: green;
+    background: rgb(160, 240, 160);
 }
 
 .AnswerItem.error{
-    background: red;
+    background: rgb(233, 113, 113);
 }

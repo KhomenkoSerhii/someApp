@@ -1,16 +1,16 @@
 import React from "react";
-import "./AnswerItem.css";
+import classes from "./AnswerItem.css";
 
 const AnswerItem = props => {
-  // const cls = [AnswerItem];
+  const cls = [AnswerItem];
 
-  // if (props.state) {
-  //   cls.push(AnswerItem[props.state]);
-  // }
+  if (props.state) {
+    cls.push(AnswerItem[props.state]);
+  }
 
   return (
     <li
-      className='AnswerItem'
+      className={classes.AnswerItem}
       onClick={() => props.onAnswerClick(props.answer.id)}
     >
       {props.answer.text}

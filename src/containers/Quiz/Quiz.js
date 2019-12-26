@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Quiz.css";
+import classes from "./Quiz.css";
 import ActiveQuiz from "../../components/ActiveQuiz/ActiveQuiz";
 import FinishedQuiz from '../../components/FinishedQuiz/FinishedQuiz'
 
@@ -98,8 +98,8 @@ retryHandler = () => {
 
   render() {
     return (
-      <div className="Quiz">
-        <div className="QuizWrapper">
+      <div className={classes.Quiz}>
+        <div className={classes.QuizWrapper}>
           <h1>Quiz</h1>
 
         {

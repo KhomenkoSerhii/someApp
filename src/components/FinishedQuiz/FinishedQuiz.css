@@ -17,10 +17,10 @@
     margin-left: 10px;
 }
 
-.fa-check{
-    color: green;
+.success{
+    color: rgb(160, 240, 160);
 }
 
-.fa-times{
-    color: red;
+.error{
+    color: rgb(233, 113, 113);
 }

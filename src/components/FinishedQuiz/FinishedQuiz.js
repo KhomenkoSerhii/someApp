@@ -1,6 +1,6 @@
 import React from 'react'
-import './FinishedQuiz.css'
-
+import classes from './FinishedQuiz.css'
+import Button from '../UI/Button/Button'
 
 const FinishedQuiz = props =>{
 
@@ -13,14 +13,14 @@ const FinishedQuiz = props =>{
 
 
     return(
-        <div className='FinishedQuiz'>
+        <div className={classes.FinishedQuiz}>
             <ul>
 
                 {props.quiz.map((quizItem, index) => {
                     const cls = [
                         'fa',
                         props.results[quizItem.id] === 'error' ? 'fa-times' : 'fa-check', 
-                        [props.results[quizItem.id]]
+                        classes[props.results[quizItem.id]]
                       
                     ]
                     
@@ -36,7 +36,9 @@ const FinishedQuiz = props =>{
             </ul>
             <p>{successCount} / {props.quiz.length}</p>
             <div>
-                <button onClick={props.onRetry}>Повторить</button>
+             
+                <Button onClick={props.onRetry} type='primary'>Повторить</Button>
+                <Button onClick={props.onRetry} type='success'>Перейти в список тегов</Button>
             </div>
         </div>
     )
